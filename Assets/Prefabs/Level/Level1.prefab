@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8085880719653127562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.62003225, y: -0.818716, z: 8.7653885}
+  m_LocalPosition: {x: -0.62003225, y: -0.818716, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120,10 +120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8085880719653127561}
     m_Modifications:
-    - target: {fileID: 8088890131499089885, guid: 5327fd2823b539945805b859547028ea, type: 3}
-      propertyPath: m_Name
-      value: LevelCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8088890131605027164, guid: 5327fd2823b539945805b859547028ea, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -186,6 +182,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8085880719653127561}
     m_Modifications:
+    - target: {fileID: 7867166022714627972, guid: 792d5ca36b61e87479ee35b170df6b0c, type: 3}
+      propertyPath: m_Size.z
+      value: 0.11
+      objectReference: {fileID: 0}
     - target: {fileID: 8841980035256516435, guid: 792d5ca36b61e87479ee35b170df6b0c, type: 3}
       propertyPath: m_Name
       value: Background
