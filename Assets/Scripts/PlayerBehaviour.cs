@@ -33,10 +33,10 @@ namespace XoXCase
             Moving = true;
             _currentItem = selectedItem;
             _itemSequence = DOTween.Sequence();
-            _itemSequence.Append(transform.DOMove(_takeItemPoint.position, 1f)
+            _itemSequence.Append(transform.DOMove(_takeItemPoint.position, 0.75f)
                 .OnComplete(() => _currentItem.transform.SetParent(_handPoint)));
-            _itemSequence.Append(_currentItem.transform.DOMove(_handPoint.position, 0.5f));
-            _itemSequence.Append(transform.DOMove(_releaseItemPoint.position, 1.5f));
+            _itemSequence.Append(_currentItem.transform.DOLocalMove(Vector3.zero, 0.2f));
+            _itemSequence.Append(transform.DOMove(_releaseItemPoint.position, 1f));
             _itemSequence.OnComplete(OnTakeItemComplete);
             _itemSequence.Play();
 

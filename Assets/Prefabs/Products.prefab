@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2300303777264284901}
   - component: {fileID: 2300303777264284900}
   - component: {fileID: 2300303777915472432}
-  - component: {fileID: 2300303777915472436}
+  - component: {fileID: 8896452127870653980}
   m_Layer: 6
   m_Name: MusicCD
   m_TagString: Untagged
@@ -134,7 +134,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.1999993, y: 7.1999993, z: 0.2}
   m_Center: {x: -0.0000038146973, y: 0.0000019073486, z: 0}
---- !u!114 &2300303777915472436
+--- !u!114 &8896452127870653980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2300303777264284898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b85d04561c2fd741a44ea4596e41104, type: 3}
+  m_Script: {fileID: 11500000, guid: 68d53234505821c469cfeb788f5c3359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 10
+  _name: Vinyl Stayin Alive
+  _price: 20
+  _title: Stayin' Alive
+  _author: Bee Gees
+  _trackList: []
 --- !u!1 &2300303777709174027
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +162,7 @@ GameObject:
   - component: {fileID: 2300303777709174026}
   - component: {fileID: 2300303777709174029}
   - component: {fileID: 2300303777915472434}
-  - component: {fileID: 2300303777915472438}
+  - component: {fileID: 7368915315707981228}
   m_Layer: 6
   m_Name: Food
   m_TagString: Untagged
@@ -246,7 +250,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2300303777915472438
+--- !u!114 &7368915315707981228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,10 +259,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2300303777709174027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b85d04561c2fd741a44ea4596e41104, type: 3}
+  m_Script: {fileID: 11500000, guid: e7216c0556e816b41a806f24b78b7378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 10
+  _name: Cherry Cake
+  _price: 3
+  _foodType: 3
+  _weight: 0.1
 --- !u!1 &2300303777988501165
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +361,7 @@ GameObject:
   - component: {fileID: 2300303778265025155}
   - component: {fileID: 2300303778265025154}
   - component: {fileID: 2300303777915472433}
-  - component: {fileID: 2300303777915472437}
+  - component: {fileID: 7774235468302203309}
   m_Layer: 6
   m_Name: Book
   m_TagString: Untagged
@@ -442,7 +449,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.35, y: 7.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2300303777915472437
+--- !u!114 &7774235468302203309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,10 +458,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2300303778265025152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b85d04561c2fd741a44ea4596e41104, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e1d3709776cbe148a0d8957e064ad05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 10
+  _name: Da Vinci Code
+  _price: 5
+  _title: The Da Vinci Code
+  _author: Dan Brown
+  _blurb: The Da Vinci Code follows symbologist Robert Langdon and cryptologist Sophie
+    Neveu after a murder in the Louvre Museum in Paris causes them to become involved
+    in a battle between the Priory of Sion and Opus Dei over the possibility of Jesus
+    Christ and Mary Magdalene having had a child together.
 --- !u!1 &2300303778756018085
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +480,7 @@ GameObject:
   - component: {fileID: 2300303778756018084}
   - component: {fileID: 2300303778756018087}
   - component: {fileID: 2300303777915472431}
-  - component: {fileID: 2300303777915472435}
+  - component: {fileID: 6657761547766787242}
   m_Layer: 6
   m_Name: Magazine
   m_TagString: Untagged
@@ -554,7 +568,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7, z: 0.2}
   m_Center: {x: -0.0000019073486, y: -0.00000008940697, z: 0}
---- !u!114 &2300303777915472435
+--- !u!114 &6657761547766787242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,10 +577,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2300303778756018085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b85d04561c2fd741a44ea4596e41104, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dcdb98a10f3c1d489d556699c15c135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 10
+  _name: magazine Whisper
+  _price: 2
+  _title: Whisper
+  _issue: 78
+  _publisher: Illuminati
 --- !u!1 &2300303778788925571
 GameObject:
   m_ObjectHideFlags: 0

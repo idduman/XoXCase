@@ -10,6 +10,7 @@ namespace XoXCase
     public class LevelBehaviour : MonoBehaviour
     {
         [SerializeField] private PlayerBehaviour _player;
+        [SerializeField] private ShoppingCart _shoppingCart;
         
         private bool _started;
         private bool _finished;
@@ -108,10 +109,11 @@ namespace XoXCase
         {
             if (!_selectedItem)
                 return;
-            
+
+            //cast ray to determine drop
             var ray = _camera.ScreenPointToRay(pos);
             if (!Physics.Raycast(ray, out var hit, _playerMask)
-                || !hit.collider.TryGetComponent<PlayerBehaviour>(out var player))
+                || !hit.collider.CompareTag("Player"))
             {
                 _selectedItem.Return();
                 _selectedItem = null;
@@ -119,13 +121,14 @@ namespace XoXCase
             }
             
             //give the player the item if released over the player plane
+            _selectedItem.Return();
             _player.TakeItem(_selectedItem);
             _selectedItem = null;
         }
         
         private void OnItemTaken(ShopItem item)
         {
-            
+            _shoppingCart.AddItem(item);
         }
     }
 }
