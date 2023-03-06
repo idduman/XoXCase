@@ -43,6 +43,7 @@ namespace XoXCase
             
         }
 
+        // Event subscriptions
         private void Subscribe()
         {
             InputController.Pressed += OnPressed;
@@ -126,9 +127,18 @@ namespace XoXCase
             _selectedItem = null;
         }
         
+        //Event function for successful item drags onto player
         private void OnItemTaken(ShopItem item)
         {
             _shoppingCart.AddItem(item);
+        }
+
+        //Button onclick method for checkout
+        public void Checkout()
+        {
+            var receiptString = _shoppingCart.IngredientsText + _shoppingCart.TotalCostText;
+            GameManager.Instance.PrintReceipt(receiptString);
+            _shoppingCart.Clear();
         }
     }
 }

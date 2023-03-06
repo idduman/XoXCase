@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -37,6 +38,17 @@ namespace XoXCase
                 _totalCost += item.Price;
             }
             _totalCostText.text = $"Cost: $ {_totalCost:#.00}";
+        }
+
+        //Method for emptying the shopping cart and sending items back
+        public void Clear()
+        {
+            foreach (var item in _items)
+            {
+                item.Return();
+            }
+            _items.Clear();
+            UpdateTexts();
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
@@ -10,13 +11,12 @@ namespace XoXCase
     public class GameManager : SingletonBehaviour<GameManager>
     {
         [SerializeField] private List<LevelBehaviour> _levels = new();
+        [SerializeField] private string _receiptPath;
 
         private LevelBehaviour _previousLevel;
         private LevelBehaviour _currentLevel;
         private int _playerLevel;
 
-        private int _totalCost;
-        
         private void Start()
         {
             Load();
@@ -29,9 +29,6 @@ namespace XoXCase
                 Debug.LogError("No levels are present in GameManager");
                 return;
             }
-
-            _totalCost = 0;
-            UIController.Instance.Initialize();
             StartCoroutine(LoadRoutine());
         }
 
@@ -48,9 +45,11 @@ namespace XoXCase
             _currentLevel.Load();
         }
 
-        public void Checkout()
+        public void PrintReceipt(string receipt)
         {
-            throw new NotImplementedException();
+            StreamWriter writer = new StreamWriter("Assets/Resources/receipt.txt", false);
+            writer.Write(receipt);
+            writer.Close();
         }
     }
 }
