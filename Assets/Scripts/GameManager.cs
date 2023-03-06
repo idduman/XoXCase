@@ -47,7 +47,7 @@ namespace XoXCase
 
         public void PrintReceipt(string receipt)
         {
-            StreamWriter writer = new StreamWriter("Assets/Resources/receipt.txt", false);
+            StreamWriter writer = new StreamWriter(_receiptPath, false);
             writer.Write(receipt);
             writer.Close();
         }

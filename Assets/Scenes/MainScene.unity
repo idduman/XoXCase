@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levels:
   - {fileID: 8085880719653127560, guid: 183b9ba28b4f31f4abb03fb0cb4b8390, type: 3}
-  _receiptPath: Assets/Resources/Receipt.txt
+  _receiptPath: Assets/Output/Receipt.txt
 --- !u!114 &711941618
 MonoBehaviour:
   m_ObjectHideFlags: 0
